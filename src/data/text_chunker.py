@@ -1,5 +1,6 @@
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from src.data.pdf_loader import docs
+from src.data.embeddings_generator import create_chroma_vectorstore
 
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=500,
@@ -10,10 +11,14 @@ text_splitter = RecursiveCharacterTextSplitter(
 
 chunks = text_splitter.split_documents(docs)
 
-print(f"Nombre de chunks créés : {len(chunks)}")
+# print(f"Nombre de chunks créés : {len(chunks)}")
 
-# 4. Examiner un chunk
-print("\n--- Exemple de chunk ---")
-print(chunks[0])
-print(f"Contenu : {chunks[0].page_content}...")
-print(f"Métadonnées : {chunks[0].metadata}")
+# # 4. Examiner un chunk
+# print("\n--- Exemple de chunk ---")
+# print(chunks[0])
+# print(f"Contenu : {chunks[0].page_content}...")
+# print(f"Métadonnées : {chunks[0].metadata}")
+
+vectorstore = create_chroma_vectorstore(chunks)
+
+print("✅ ChromaDB créée et persistée avec succès")
