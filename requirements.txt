@@ -1,65 +1,41 @@
-# =========================
-# Core API
-# =========================
-fastapi==0.109.0
-uvicorn[standard]==0.27.0
-pydantic==2.5.3
-pydantic-settings==2.1.0
-python-multipart==0.0.6
+# LangChain (sans version fixe = dernière version)
+langchain
+langchain-community
+langchain-huggingface
 
-# =========================
-# Database
-# =========================
-sqlalchemy==2.0.25
-psycopg2-binary==2.9.9
-alembic==1.13.1
+# Embeddings & Vectorstore
+sentence-transformers
+chromadb
 
-# =========================
-# Authentication
-# =========================
-python-jose[cryptography]==3.3.0
-passlib[bcrypt]==1.7.4
-bcrypt==4.1.2
+# Transformers & LLM
+transformers
+torch
+accelerate
 
-# =========================
-# LangChain (PINNED & STABLE)
-# =========================
-langchain==0.1.4
-langchain-community==0.0.16
+# PDF Processing
+pypdf
 
-# =========================
-# Vector DB & PDF
-# =========================
-chromadb==0.4.22
-pypdf==3.17.4
+# Utilities
+pydantic-settings
 
-# =========================
-# Embeddings & LLM
-# =========================
-sentence-transformers==2.3.1
-transformers==4.37.0
+psycopg2-binary
+pandas
+seaborn
+matplotlib
+numpy
+scikit-learn
+fastapi 
+sqlalchemy 
+uvicorn
+pydantic
+joblib
+python-dotenv 
+pytest
+python_jose
+passlib[argon2]
+requests
+pyarrow
+pyarrow
+pydantic[email]
+pwdlib
 
-# ⚠️ torch installé séparément (voir instructions)
-# torch==2.1.2
-# pip install torch==2.1.2 --index-url https://download.pytorch.org/whl/cpu
-
-google-generativeai==0.3.2
-
-# =========================
-# ML & Clustering
-# =========================
-scikit-learn==1.4.0
-numpy==1.26.3
-pandas==2.2.0
-
-# =========================
-# MLflow
-# =========================
-mlflow==2.9.2
-
-# =========================
-# Utils
-# =========================
-python-dotenv==1.0.0
-pyyaml==6.0.1
-requests==2.31.0
