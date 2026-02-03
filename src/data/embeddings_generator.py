@@ -26,4 +26,4 @@ def create_chroma_vectorstore(chunks):
 
     return vectorstore
 
-
+# create_chroma_vectorstore(chunks)
