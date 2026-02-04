@@ -68,13 +68,15 @@ def test_rag_chain(llm, retriever, question):
         # Invoquer la chaîne RAG
         result = rag_chain({"query": question})
         
-        print("\n✨ RÉPONSE :")
-        print("-" * 60)
-        print(result["result"])
-        print("-" * 60)
+        # print("\n✨ RÉPONSE :")
+        # print("-" * 60)
+        # print(result["result"])
+        # print("-" * 60)
+        
+        return result
         
         # Afficher les sources utilisées
-        print(f"\n Sources utilisées : {len(result['source_documents'])} documents")
+        # print(f"\n Sources utilisées : {len(result['source_documents'])} documents")
         
     except Exception as e:
         print(f" ERREUR dans la chaîne RAG: {e}")
